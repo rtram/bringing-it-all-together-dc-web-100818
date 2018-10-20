@@ -84,6 +84,6 @@ class Dog
       WHERE name = ?
     SQL
     
-    DB[:conn].execute(sql, name)
+    row = DB[:conn].execute(sql, name)
   end 
 end 
