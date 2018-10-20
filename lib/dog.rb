@@ -91,7 +91,7 @@ class Dog
   
   def update
     sql = <<-SQL
-      SELECT *
+      UPDATE
       FROM dogs 
       SET name = ?, breed = ?
       WHERE id = ?
