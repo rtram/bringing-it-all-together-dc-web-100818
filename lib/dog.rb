@@ -67,7 +67,7 @@ class Dog
     
     row = DB[:conn].execute(sql, object[:name], object[:breed])[0]
     if row.nil?
-      Dog.new(object)
+      self.create(object)
     else 
       dog = Dog.new(id: row[0], name: row[1], breed: row[2])
     end 
