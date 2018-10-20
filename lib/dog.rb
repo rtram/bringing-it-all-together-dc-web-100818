@@ -8,4 +8,5 @@ class Dog
     @name = name
     @breed = breed
     @id = nil
+  end 
 end 
