@@ -66,7 +66,7 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, object[:name], object[:breed])[0]
-    # binding.pry
+    binding.pry
     if row.empty?
       dog = Dog.new(id: row[0], name: row[1], breed: row[2])
       dog.save
