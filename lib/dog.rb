@@ -66,6 +66,11 @@ class Dog
     SQL
     
     record = DB[:conn].execute(sql, object[:name], object[:breed])
+    
+    if record.empty?
+      self.create(record)
+    else 
+    
     binding.pry
   end 
 end 
