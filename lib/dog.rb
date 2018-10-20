@@ -59,7 +59,6 @@ class Dog
   end
   
   def self.find_or_create_by(object)
-    binding.pry
     sql = <<-SQL
       SELECT * 
       FROM dogs
@@ -67,6 +66,6 @@ class Dog
     SQL
     
     record = DB[:conn].execute(sql, object[:name], object[:breed])
-    
+    binding.pry
   end 
 end 
