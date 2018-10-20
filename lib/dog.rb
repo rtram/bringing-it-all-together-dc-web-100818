@@ -86,7 +86,7 @@ class Dog
     
     row = DB[:conn].execute(sql, name)[0]
     dog = self.new_from_db(row)
-    binding.pry
+    # binding.pry
     dog.name
   end 
 end 
