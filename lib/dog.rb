@@ -66,7 +66,7 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, object[:name], object[:breed])[0]
-    binding.pry
+    # binding.pry
     if row.nil?
       Dog.new(object)
     else 
