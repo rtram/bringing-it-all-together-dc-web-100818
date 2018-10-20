@@ -65,11 +65,12 @@ class Dog
       WHERE name = ? AND breed = ?
     SQL
     
-    record = DB[:conn].execute(sql, object[:name], object[:breed])
+    row = DB[:conn].execute(sql, object[:name], object[:breed])
     
-    if record.empty?
-      self.create(record)
+    if row.empty?
+      self.create(row)
     else 
+      dog = Dog.new(id: row[0], name: row[1], breed: row[2])
     
     binding.pry
   end 
