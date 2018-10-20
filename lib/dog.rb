@@ -56,6 +56,6 @@ class Dog
     
     row = DB[:conn].execute(sql,id)[0]
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
-    # binding.pry
+    binding.pry
   end
 end 
