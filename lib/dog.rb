@@ -8,5 +8,13 @@ class Dog
     @name = name
     @breed = breed
     @id = id
+  end
+  
+  def self.create_table
+    sql = <<-SQL
+      CREATE TABLE Dog
+    SQL
+    
+    DB[:conn].execute(sql)
   end 
 end 
