@@ -58,10 +58,12 @@ class Dog
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end
   
-  def self.find_or_create_by(name)
+  def self.find_or_create_by(object)
     binding.pry
     sql = <<-SQL
-      
+      SELECT * 
+      FROM dogs
+      WHERE name = ?
     SQL
     
   end 
